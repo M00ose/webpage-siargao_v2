@@ -1,51 +1,108 @@
+export const presentors = [
+    {
+        name: 'Bagtik Moserbisyo',
+        url: '/bagtik.webp',
+        height: 75,
+        width: 75,
+    },
+    {
+        name: 'Department of Tourism',
+        url: '/dot.webp',
+        height: 75,
+        width: 75,
+    },
+    {
+        name: 'General Luna Government',
+        url: '/generalLuna.webp',
+        height: 75,
+        width: 75,
+    },
+    {
+        name: 'House of Representatives',
+        url: '/houseOfRepresentatives.webp',
+        height: 75,
+        width: 75,
+    },
+]
+
 export const sponsors = [
     {
-        name: 'Sam Miguel Corp',
-        type:'Title',
-        url: '/SMC.webp',
+        type: 'Title',
+        list: [
+            {
+                name: 'Sam Miguel Corp',
+                url: '/SMC.webp',
+                height: 75,
+                width: 75,
+            },
+        ]
     },
     {
-        name: 'Smart',
         type: 'Platinum',
-        url: '/Smart.webp',
+        list: [
+            {
+                name: 'Smart',
+                url: '/Smart.webp',
+                height: 50,
+                width: 50,
+            },
+            {
+                name: 'Seaoil',
+                url: '/Seaoil.webp',
+                height: 50,
+                width: 50,
+            },
+            {
+                name: 'Scheirman',
+                url: '/Shierman.webp',
+                height: 30,
+                width: 50,
+            },
+        ]
     },
     {
-        name: 'Seaoil',
-        type: 'Platinum',
-        url: '/Seaoil.webp',
-    },
-    {
-        name: 'Scheirman',
-        type: 'Platinum',
-        url: '/Shierman.webp',
-    },
-    {
-        name: 'Concrete Stone Corp',
         type: 'Gold',
-        url: '/CSC.webp',
+        list: [
+            {
+                name: 'Concrete Stone Corp',
+                url: '/CSC.webp',
+                height: 50,
+                width: 50,
+            },
+            {
+                name: 'Duros',
+                url: '/Duros.webp',
+                height: 50,
+                width: 50,
+            },
+            {
+                name: 'Road Edge',
+                url: '/RoadEdge.webp',
+                height: 50,
+                width: 50,
+            },
+        ]
     },
     {
-        name: 'Duros',
-        type: 'Gold',
-        url: '/Duros.webp',
-    },
-    {
-        name: 'Road Edge',
-        type: 'Gold',
-        url: '/RoadEdge.webp',
-    },
-    {
-        name: 'Tanduay',
         type: 'Silver',
-        url: '/Tanduay.webp',
+        list: [
+            {
+                name: 'Tanduay',
+                url: '/Tanduay.webp',
+                height: 50,
+                width: 50,
+            },
+            {
+                name: 'Coca Cola Beverages Philippines, Inc',
+                url: '/CCBPI.webp',
+                height: 50,
+                width: 50,
+            },   
+        ]
     },
-    {
-        name: 'Coca Cola Beverages Philippines, Inc',
-        type: 'Silver',
-        url: '/CCBPI.webp',
-    },
-    
-];
+
+
+]
 
 export const events = [
     {

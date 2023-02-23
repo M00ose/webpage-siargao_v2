@@ -15,10 +15,6 @@ module.exports = {
         'brand-purple': '#7F58A4',
         'brand-blue': '#00A1DF',
       },
-      // fontFamily: {
-      //   PassionOne: ['Passion One', 'san-serif'],
-      //   LondrinaSolid: ['Londrina Solid', 'Helvetica'],
-      // },
     },
     screens: {
       xs: "480px",
