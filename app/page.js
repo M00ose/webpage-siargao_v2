@@ -9,7 +9,7 @@ const LondrinaSolid = Londrina_Solid({ subsets: ['latin'], weight: '100' });
 
 
 const page = () => (
-  <div className={`bg-brand-orange overflow-hidden ${PassionOne.className}`}>
+  <div className={`bg-brand-orange snap-y	snap-mandatory overflow-hidden overscroll-scroll ${PassionOne.className}`}>
     <Hero />
     <Recap /> 
     <Events /> 
