@@ -9,17 +9,16 @@ import { presentors, sponsors } from '../constants';
 
 const Hero = () => {
   return (
-
-    <section className='relative'>
+    <section className='snap-start h-screen relative'>
       <Navbar />
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className={`${styles.paddingY} h-full flex md:flex-row flex-col justify-center gap-2 md:gap-48 `}
+        className={`${styles.padding} h-full flex md:flex-row flex-col justify-center gap-2 md:gap-36`}
       >
-        <div className='flex justify-center items-center h-screen md:h-[90vh] relative'>
+        <div className={`flex justify-center items-start h-full md:mt-4 relative`}>
           <div className= 'flex justify-center items-center flex-col relative'>
 
             {/* 26th */}
@@ -116,8 +115,8 @@ const Hero = () => {
 
         </div>
 
-        <div className='flex flex-col justify-center items-center h-screen md:h-[90vh] relative'>
-          <motion.h1 variants={textVariant(3)} className={`mb-4 ${styles.mediumText} z-10`}>Presented By</motion.h1>
+        <div className={`flex flex-col justify-start items-center h-full md:mt-12 relative`}>
+          <motion.h1 variants={textVariant(3)} className={`mb-4 md:mb-0 ${styles.mediumText} z-10`}>Presented By</motion.h1>
 
             <motion.div variants={zoomIn(3.5, 0.5)} className="flex flex-row gap-4 items-center justify-center z-10">
               {presentors.map((presentor) => (
@@ -127,15 +126,15 @@ const Hero = () => {
                   alt={presentor.name}
                   height={presentor.height}
                   width={presentor.width}
-                  className='h-12 md:h-[80%] w-auto'
+                  className='h-12 md:h-[50%] w-auto'
                 />
               ))}
             </motion.div>
 
-            <motion.h1 variants={textVariant(3)} className={`mt-4 ${styles.mediumText} z-10`}>Sponsored By</motion.h1>
+            <motion.h1 variants={textVariant(3)} className={`mt-4 md:mt-2 ${styles.mediumText} z-10`}>Sponsored By</motion.h1>
 
             {sponsors.map((type) => (
-              <motion.div key={type.id} variants={fadeIn("up","tween",3.5,0.5)} className="flex flex-row gap-4 items-center justify-center z-10">
+              <motion.div key={type.id} variants={fadeIn("up","tween",3.5,0.5)} className="flex flex-row gap-4 items-center justify-center md:-m-2 z-10">
                 {type.list.map((sponsor) => (
                   <Image
                     key={sponsor.name}
@@ -143,7 +142,7 @@ const Hero = () => {
                     alt={sponsor.name}
                     height={sponsor.height}
                     width={sponsor.width}
-                    className='h-[50%] md:h-[80%] w-auto'
+                    className='h-[50%] md:h-[50%] w-auto'
                   />
                 ))}
               </motion.div>
