@@ -22,6 +22,7 @@
     rgba(252,213,18,1) 20%, 
     rgba(247,160,27,1) 100%
   );
+  filter: blur(50px);
 }
 
 .yellow-gradient {
@@ -31,6 +32,7 @@
     rgba(247,160,27,1) 0%, 
     rgba(252,213,18,1) 36%
   );
+  filter: blur(75px);
 }
 
 .blue-gradient {
@@ -40,6 +42,7 @@
     rgba(0,161,223,1) 0%, 
     rgba(253,187,45,1) 100%
   );
+  filter: blur(200px);
 }
 
 .purple-gradient {
@@ -50,4 +53,5 @@
     rgba(252,213,18,1) 43%,
     rgba(247,160,27,1) 100%
   );
+  filter: blur(25px);
 }

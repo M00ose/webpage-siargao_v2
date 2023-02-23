@@ -14,10 +14,12 @@ const styles = {
     navPadding: 'pt-[98px]',
   
     // hero section
-    extraLarge:
-        'lg:text-[108px] md:text-[64px] sm:text-[36px] text-[24px] lg:leading-[100px] md:leading-[70px] sm:leading-[48px] leading-[36px] uppercase text-white',
-    large:
-        'lg:text-[64px] md:text-[36px] sm:text-[20px] text-[14px] lg:leading-[84px] md:leading-[60px] sm:leading-[40px] leading-[24px] uppercase text-white',
+    largeText:'md:text-[12rem] sm:text-[12rem] xs:text-9xl text-9xl text-white',
+    largeAltText:'md:text-[12rem] sm:text-[12rem] xs:text-9xl text-9xl text-brand-yellow',
+    mediumText:'md:text-4xl sm:text-6xl xs:text-4xl text-4xl text-white',
+    smallText:'md:text-5xl sm:text-4xl text-3xl text-white',
+    smallAltText:'md:text-5xl sm:text-4xl text-3xl text-brand-yellow',
+    extraSmallText:'md:text-1xl sm:text-2xl xs:text-1xl text-1xl text-white',
   };
   
   export default styles;
