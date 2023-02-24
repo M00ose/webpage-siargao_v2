@@ -1,9 +1,9 @@
 import Navbar from './Navbar';
-import ActivitiesCard from './ActivitiesCard';
+import Wave from './Wave';
 import Footer from './Footer';
 
 export {
     Navbar,
-    ActivitiesCard,
+    Wave,
     Footer,
 }
