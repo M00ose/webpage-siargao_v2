@@ -1,5 +1,5 @@
 'use client';
-import { Navbar, Wave } from '../components';
+import { Navbar } from '../components';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -99,27 +99,38 @@ const Hero = () => {
                         
                     </div>
                 </motion.div>
-
-                {/* Left Bottom Frame */}
+                
                 <motion.div
-                    className='hidden'
+                    variants={fadeIn("down","tween",2.5,0.5)}
                 >
-                    <Image
-                        key="left-bottomFrame"
-                        src="/bottomFrame.png"
-                        alt="bottomFrame"
-                        height={720}
-                        width={720}
-                    />
+                    {/* Left Bottom Frame */}
+                    <div className=' absolute top-0 left-0 h-[10vh] w-[200vw] rotate-180 -translate-y-[30%]'>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7F58A4" fill-opacity="1" d={`${styles.purpleWave}`}></path></svg>
+                    </div>
+                    
+
+                    {/* Left Splash 2 */}
+                    <div className='absolute h-[90vh] bottom-0 right-0'>
+                        <Image
+                            key="left-splash"
+                            src="/splash.png"
+                            alt="splash"
+                            height={720}
+                            width={720}
+                            className='rotate-[130deg] -translate-y-[35%] translate-x-[35%]'
+                        />
+                    </div>
+                    
                 </motion.div>
+
             </div>
 
             <div>
                 {/* sponsors */}
-                <div className={`${styles.paddings}`}>
+                <div className={`${styles.paddings} flex justify-center`}>
                     <motion.div
-                        variants={zoomIn(3.5,0.5)}
-                        className='flex flex-row gap-4 sm:gap-6 items-center justify-center'
+                        variants={zoomIn(2.5,0.5)}
+                        className='grid grid-cols-4 xxs:grid-cols-2 gap-4'
                     >
                         {presentors.map((presentor) => (
                             <Image 
@@ -128,17 +139,20 @@ const Hero = () => {
                                 alt={presentor.name}
                                 height={presentor.height}
                                 width={presentor.width}
-                                className='h-12 sm:h-20 w-auto'
+                                className='h-12 xxs:h-16 sm:h-24 w-auto'
                             />
                         ))}
 
                     </motion.div>
                 </div>
 
-                <div className='relative'>
+                <motion.div 
+                    variants={fadeIn("up","tween",3.5,0.5)}
+                    className='relative'
+                >
                     {/* Drums */}
-                    <motion.div 
-                        className='absolute top-0 -translate-y-[40%] h-96 w-96 z-10'
+                    <div 
+                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] h-96 w-96 z-10'
                     >
                         <Image
                             key="drums"
@@ -148,11 +162,11 @@ const Hero = () => {
                             width={480}
                             className='h-full w-full'
                         />
-                    </motion.div>
+                    </div>
                     
                     {/* Guitar */}
-                    <motion.div 
-                        className='absolute top-0 -translate-y-[50%] -translate-x-[30%] h-72 w-72 -rotate-45 z-10'
+                    <div 
+                        className='absolute top-0 -translate-y-[50%] xxs:-translate-y-[30%] -translate-x-[30%] h-72 w-72 -rotate-45 z-10'
                     >
                         <Image
                             key="guitar"
@@ -163,10 +177,10 @@ const Hero = () => {
                             className='h-full w-full'
                         />
 
-                    </motion.div>
+                    </div>
                     
                     {/* Drinks */}
-                    <motion.div 
+                    <div 
                         className='absolute hidden top-0 z-10'
                     >
                         <Image
@@ -178,11 +192,11 @@ const Hero = () => {
                             className='h-full w-full'
                         />
 
-                    </motion.div>
+                    </div>
 
                     {/* Right Bottom Frame */}
-                    <motion.div
-                        className='absolute h-[200vw] w-[200vw] top-0 right-0 -translate-y-[75%] xxs: -translate-y-[80%] translate-x-[20%] rotate-12'
+                    <div
+                        className='absolute h-[200vw] w-[200vw] top-0 right-0 -translate-y-[75%] xxs:-translate-y-[70%] translate-x-[20%] rotate-12'
                     >
                         <Image
                             key="right-bottomFrame"
@@ -192,19 +206,15 @@ const Hero = () => {
                             width={720}
                             className='h-full w-full'
                         />
-                    </motion.div>
+                    </div>
 
-                </div>
+                </motion.div>
             </div>
             
             
 
             <motion.div>
                 {/* Right Splash */}
-            </motion.div>
-
-            <motion.div>
-                {/* Left Splash 2 */}
             </motion.div>
 
             <motion.div>
