@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import styles from '../app/styles.js';
-import { staggerContainer, textVariant, zoomIn, slideIn, drop, fadeIn } from '../utils/motion.js';
-import { presentors, sponsors } from '../constants';
+import { staggerContainer, zoomIn, slideIn, drop, fadeIn } from '../utils/motion.js';
+import { presentors } from '../constants';
 
 const Hero = () => {
   return (
@@ -16,7 +16,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className={`${styles.padding} ${styles.innerWidth} flex flex-col xxs:gap-12 justify-between min-h-[80vh] w-full relative z-10`}
+            className={`${styles.padding} ${styles.innerWidth} flex flex-col md:flex-row xxs:gap-12 md:gap-24 justify-between md:justify-center min-h-[80vh] w-full relative z-10`}
         >
             {/* Siargao International Surfing Festival Logo */}
             <div className={`${styles.xPaddings} flex flex-col items-center`}>
@@ -25,7 +25,7 @@ const Hero = () => {
                     variants={drop(0.5,1)}
                     className={`relative flex flex-row justify-center w-full`}
                 >
-                    <div className='absolute h-14 ss:h-24 bottom-0 left-[12%] ss:left-[20%]'>
+                    <div className='absolute h-14 ss:h-24 bottom-0 left-[12%] ss:left-[20%] md:-left-[2%]'>
                       <Image 
                         key="tree"
                         src="/tree.png"
@@ -35,7 +35,7 @@ const Hero = () => {
                         className="h-full w-full -rotate-12"
                     />  
                     </div>
-                    <div className='absolute h-8 ss:h-12 bottom-0 left-[20%] ss:left-[26%]'>
+                    <div className='absolute h-8 ss:h-12 bottom-0 left-[20%] ss:left-[26%] md:left-[8%]'>
                       <Image 
                         key="hut"
                         src="/hut.png"
@@ -66,7 +66,7 @@ const Hero = () => {
                 {/* International Surfing Festival */}
                 <motion.div
                     variants={slideIn('left','tween',1,0.5)}
-                    className='flex items-start justify-between w-[60%] ss:w-[50%] -mt-4'
+                    className='flex items-start justify-between w-[60%] ss:w-[50%] md:w-[90%] -mt-4'
                 >
                     
                     <div className='w-[50%] text-2xl xxs:text-3xl ss:text-5xl text-white'>
@@ -93,7 +93,7 @@ const Hero = () => {
                             alt="wave"
                             height={150}
                             width={150}
-                            className='h-[160%] w-[160%] -translate-y-[60%] translate-x-[10%] ss:-translate-x-[7%]'
+                            className='h-[160%] w-[160%] -translate-y-[60%] translate-x-[10%] ss:-translate-x-[7%] md:translate-x-0'
                             />
                         </div>
                         
@@ -106,7 +106,7 @@ const Hero = () => {
                 >
                     {/* Left Bottom Frame */}
                     <div
-                        className='absolute -translate-y-[70%] ss:-translate-y-[55%] sm:-translate-y-[52%] translate-x-[35%] h-[200vw] w-[200vw] top-0 right-0'
+                        className='absolute -translate-y-[70%] ss:-translate-y-[55%] sm:-translate-y-[52%] md:-translate-y-[75%] translate-x-[35%] md:translate-x-[52%] h-[200vw] w-[200vw] md:h-[150vw] md:w-[150vw] top-0 right-0 overflow-hidden'
                     >
                         <Image
                             key="right-bottomFrame"
@@ -114,19 +114,7 @@ const Hero = () => {
                             alt="bottomFrame"
                             height={720}
                             width={720}
-                            className='h-full w-full rotate-[180deg]'
-                        />
-                    </div>
-                    
-                    {/* Left Splash 2 */}
-                    <div className='absolute hidden'>
-                        <Image
-                            key="left-splash"
-                            src="/splash.png"
-                            alt="splash"
-                            height={720}
-                            width={720}
-                            className='rotate-[130deg]'
+                            className='h-full w-full rotate-[180deg] md:rotate-[110deg]'
                         />
                     </div>
                     
@@ -161,7 +149,7 @@ const Hero = () => {
                 >
                     {/* Drums */}
                     <div 
-                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] ss:-translate-y-[35%] h-96 w-96 ss:h-[48rem] ss:w-[48rem] z-10'
+                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] ss:-translate-y-[35%] md:-translate-y-[20%] h-96 w-96 ss:h-[48rem] ss:w-[48rem] z-10'
                     >
                         <Image
                             key="drums"
@@ -175,7 +163,7 @@ const Hero = () => {
                     
                     {/* Guitar */}
                     <div 
-                        className='absolute top-0 -translate-y-[50%] xxs:-translate-y-[30%] ss:-translate-y-[50%] -translate-x-[30%] h-72 w-72 ss:h-[36rem] ss:w-[36rem] -rotate-45 z-10'
+                        className='absolute top-0 -translate-y-[50%] xxs:-translate-y-[30%] ss:-translate-y-[50%] md:-translate-y-[10%] -translate-x-[30%] md:-translate-x-[40%] h-72 w-72 ss:h-[36rem] ss:w-[36rem] -rotate-45 z-10'
                     >
                         <Image
                             key="guitar"
@@ -190,7 +178,7 @@ const Hero = () => {
                     
                     {/* Drinks */}
                     <div 
-                        className='absolute hidden top-0 z-10'
+                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] ss:-translate-y-[35%] md:-translate-y-[10%] md:-translate-x-[10%] h-96 w-96 ss:h-[48rem] ss:w-[48rem] z-10'
                     >
                         <Image
                             key="drinks"
@@ -198,14 +186,13 @@ const Hero = () => {
                             alt="drinks"
                             height={480}
                             width={480}
-                            className='h-full w-full'
+                            className='h-full w-full -rotate-12'
                         />
-
                     </div>
 
                     {/* Right Bottom Frame */}
                     <div
-                        className='absolute h-[200vw] w-[200vw] top-0 right-0 -translate-y-[75%] xxs:-translate-y-[70%] sm:-translate-y-[75%] translate-x-[20%] rotate-12'
+                        className='absolute h-[200vw] w-[200vw] md:h-[100vw] md:w-[100vw] top-0 right-0 -translate-y-[75%] xxs:-translate-y-[70%] sm:-translate-y-[75%] md:-translate-y-[50%] translate-x-[20%] md:translate-x-[30%] rotate-12 md:rotate-[270deg]'
                     >
                         <Image
                             key="right-bottomFrame"
@@ -219,20 +206,6 @@ const Hero = () => {
 
                 </motion.div>
             </div>
-            
-            
-
-            <motion.div>
-                {/* Right Splash */}
-            </motion.div>
-
-            <motion.div>
-                {/* Right Highlight */}
-            </motion.div>
-
-            <motion.div>
-                {/* Left Highlight */}
-            </motion.div>
 
         </motion.div>
     </section>
