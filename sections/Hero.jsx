@@ -25,7 +25,7 @@ const Hero = () => {
                     variants={drop(0.5,1)}
                     className={`relative flex flex-row justify-center w-full`}
                 >
-                    <div className='absolute h-14 sm:h-24 bottom-0 left-[12%] sm:left-[20%]'>
+                    <div className='absolute h-14 ss:h-24 bottom-0 left-[12%] ss:left-[20%]'>
                       <Image 
                         key="tree"
                         src="/tree.png"
@@ -35,7 +35,7 @@ const Hero = () => {
                         className="h-full w-full -rotate-12"
                     />  
                     </div>
-                    <div className='absolute h-8 sm:h-12 bottom-0 left-[20%] sm:left-[26%]'>
+                    <div className='absolute h-8 ss:h-12 bottom-0 left-[20%] ss:left-[26%]'>
                       <Image 
                         key="hut"
                         src="/hut.png"
@@ -47,8 +47,8 @@ const Hero = () => {
                     </div>
                     
                     <div className='w-[75%] h-full justify-center flex flex-row items-center text-brand-yellow'>
-                        <h1 className='text-8xl sm:text-[10rem] -mb-4 sm:-mb-8'>26</h1>
-                        <p className='text-1xl sm:text-4xl'>TH</p>
+                        <h1 className='text-8xl ss:text-[10rem] -mb-4 sm:-mb-8'>26</h1>
+                        <p className='text-1xl ss:text-4xl'>TH</p>
                     </div>
                     
                 </motion.div>
@@ -56,33 +56,33 @@ const Hero = () => {
                 {/* Siargao */}
                 <motion.div
                     variants={zoomIn(0.2, 0.5)}
-                    className='text-center text-9xl sm:text-[12rem]  text-white'
+                    className='text-center text-9xl ss:text-[12rem]  text-white'
                 >
                     
                     <div className='-mt-4'>S<span className='text-brand-yellow'>IA</span>R</div>
-                    <div className='-mt-10 sm:-mt-14 tracking-wide sm:tracking-wider'>GAO</div>
+                    <div className='-mt-10 ss:-mt-14 tracking-wide sm:tracking-wider'>GAO</div>
                 </motion.div>
                 
                 {/* International Surfing Festival */}
                 <motion.div
                     variants={slideIn('left','tween',1,0.5)}
-                    className='flex items-start justify-between w-[60%] sm:w-[50%] -mt-4'
+                    className='flex items-start justify-between w-[60%] ss:w-[50%] -mt-4'
                 >
                     
-                    <div className='w-[50%] text-2xl xxs:text-3xl sm:text-5xl text-white'>
-                        <div className='-mt-2 sm:-mt-4 text-base xxs:text-lg sm:text-2xl'>International</div>
+                    <div className='w-[50%] text-2xl xxs:text-3xl ss:text-5xl text-white'>
+                        <div className='-mt-2 ss:-mt-4 text-base xxs:text-lg ss:text-2xl'>International</div>
                         <div className='-mt-2 tracking-widest'>Surfing</div>
                         <div className='-mt-2 tracking-wider'>Festival</div>
                     </div>
                     <div className='flex w-[50%] h-[10vh] relative'>
-                        <div className='sm:h-44 sm:w-44 absolute z-10'>
+                        <div className='ss:h-44 ss:w-44 absolute z-10'>
                            <Image 
                             key="surfer"
                             src="/surfer.png"
                             alt="surfer"
                             height={108}
                             width={108}
-                            className='h-full w-full -translate-y-20 sm:-translate-y-36 xxs:translate-x-3'
+                            className='h-full w-full -translate-y-20 ss:-translate-y-36 xxs:translate-x-3'
                         /> 
                         </div>
                         
@@ -93,7 +93,7 @@ const Hero = () => {
                             alt="wave"
                             height={150}
                             width={150}
-                            className='h-[160%] w-[160%] -translate-y-[60%] translate-x-[10%]'
+                            className='h-[160%] w-[160%] -translate-y-[60%] translate-x-[10%] ss:-translate-x-[7%]'
                             />
                         </div>
                         
@@ -102,22 +102,31 @@ const Hero = () => {
                 
                 <motion.div
                     variants={fadeIn("down","tween",2.5,0.5)}
+                    className='relative z-10'
                 >
                     {/* Left Bottom Frame */}
-                    <div className=' absolute top-0 left-0 h-[10vh] w-[200vw] rotate-180 -translate-y-[30%]'>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7F58A4" fill-opacity="1" d={`${styles.purpleWave}`}></path></svg>
+                    <div
+                        className='absolute -translate-y-[70%] ss:-translate-y-[55%] sm:-translate-y-[52%] translate-x-[35%] h-[200vw] w-[200vw] top-0 right-0'
+                    >
+                        <Image
+                            key="right-bottomFrame"
+                            src="/bottomFrame.png"
+                            alt="bottomFrame"
+                            height={720}
+                            width={720}
+                            className='h-full w-full rotate-[180deg]'
+                        />
                     </div>
                     
-
                     {/* Left Splash 2 */}
-                    <div className='absolute h-[90vh] bottom-0 right-0'>
+                    <div className='absolute hidden'>
                         <Image
                             key="left-splash"
                             src="/splash.png"
                             alt="splash"
                             height={720}
                             width={720}
-                            className='rotate-[130deg] -translate-y-[35%] translate-x-[35%]'
+                            className='rotate-[130deg]'
                         />
                     </div>
                     
@@ -152,7 +161,7 @@ const Hero = () => {
                 >
                     {/* Drums */}
                     <div 
-                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] h-96 w-96 z-10'
+                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] ss:-translate-y-[35%] h-96 w-96 ss:h-[48rem] ss:w-[48rem] z-10'
                     >
                         <Image
                             key="drums"
@@ -166,7 +175,7 @@ const Hero = () => {
                     
                     {/* Guitar */}
                     <div 
-                        className='absolute top-0 -translate-y-[50%] xxs:-translate-y-[30%] -translate-x-[30%] h-72 w-72 -rotate-45 z-10'
+                        className='absolute top-0 -translate-y-[50%] xxs:-translate-y-[30%] ss:-translate-y-[50%] -translate-x-[30%] h-72 w-72 ss:h-[36rem] ss:w-[36rem] -rotate-45 z-10'
                     >
                         <Image
                             key="guitar"
@@ -196,7 +205,7 @@ const Hero = () => {
 
                     {/* Right Bottom Frame */}
                     <div
-                        className='absolute h-[200vw] w-[200vw] top-0 right-0 -translate-y-[75%] xxs:-translate-y-[70%] translate-x-[20%] rotate-12'
+                        className='absolute h-[200vw] w-[200vw] top-0 right-0 -translate-y-[75%] xxs:-translate-y-[70%] sm:-translate-y-[75%] translate-x-[20%] rotate-12'
                     >
                         <Image
                             key="right-bottomFrame"
