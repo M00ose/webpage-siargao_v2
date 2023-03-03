@@ -13,19 +13,12 @@ const Navbar = () => {
       whileInView="show"
       className={`${styles.xPaddings} py-8 relative z-20`}
     >
-      <div className={`${styles.innerWidth} mx-auto flex justify-between items-center gap-8`}>
+      <div className={`${styles.innerWidth} mx-auto flex justify-between items-start gap-8`}>
         <Image 
           src='/logo.png'
           alt="logo"
           width={48}
           height={48}
-          className="object-contain z-10"
-        />
-        <Image 
-          src='/Menu.svg'
-          alt="Menu"
-          width={24}
-          height={24}
           className="object-contain z-10"
         />
       </div>
