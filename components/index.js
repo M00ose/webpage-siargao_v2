@@ -1,9 +1,9 @@
 import Navbar from './Navbar';
-import Wave from './Wave';
+import Socials from './Socials';
 import Footer from './Footer';
 
 export {
     Navbar,
-    Wave,
+    Socials,
     Footer,
 }
