@@ -1,5 +1,5 @@
 'use client';
-import { Navbar } from '../components';
+import { Navbar, Socials } from '../components';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -11,6 +11,7 @@ const Hero = () => {
   return (
     <section className={`${styles.innerWidth} snap-start min-h-screen h-fit relative`}>
         <Navbar />
+        <Socials />
         <motion.div
             variants={staggerContainer}
             initial="hidden"
