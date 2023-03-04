@@ -11,9 +11,9 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       whileInView="show"
-      className={`${styles.xPaddings} py-8 relative z-20`}
+      className='absolute top-10 left-10 z-30'
     >
-      <div className={`${styles.innerWidth} mx-auto flex justify-between items-start gap-8`}>
+      <div className='mx-auto flex justify-between items-start gap-8'>
         <Image 
           src='/logo.png'
           alt="logo"
@@ -22,6 +22,16 @@ const Navbar = () => {
           className="object-contain z-10"
         />
       </div>
+
+      {/* <div>
+        <Image 
+          src='/logo.png'
+          alt="logo"
+          width={48}
+          height={48}
+          className="z-10"
+        />
+      </div> */}
     </motion.div>
   )
 }
