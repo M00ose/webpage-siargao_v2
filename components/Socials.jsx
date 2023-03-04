@@ -7,7 +7,7 @@ import Email from '@mui/icons-material/Email';
 const Socials = () => {
   return (
     <div
-        className='absolute top-10 right-10 flex flex-col gap-2 z-20'
+        className='absolute top-10 right-10 flex flex-row sm:flex-col z-20'
         style={{ color: "#FFF" }}
     >
         <a href="https://web.facebook.com/SiargaoInternationalSurfingFestival"><Facebook className='hover:scale-125 hover:-translate-x-2'/></a>
