@@ -22,16 +22,6 @@ const Navbar = () => {
           className="object-contain z-10"
         />
       </div>
-
-      {/* <div>
-        <Image 
-          src='/logo.png'
-          alt="logo"
-          width={48}
-          height={48}
-          className="z-10"
-        />
-      </div> */}
     </motion.div>
   )
 }
