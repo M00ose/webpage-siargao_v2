@@ -2,8 +2,8 @@ import styles from '../app/styles.js';
 
 const About = () => {
   return (
-    <section className={`pt-96 pb-24 px-24 ${styles.section} bg-brand-purple min-h-screen relative`}>
-      <h2 className='text-center mb-8 text-9xl text-white'>About Us</h2>
+    <section className={`py-24 px-48 ${styles.section} bg-brand-purple min-h-screen relative`}>
+      <h2 className='text-center mb-8 text-6xl text-white'>About Us</h2>
       <div className={`flex flex-row justify-center gap-24 font-sans text-2xl text-white text-justify z-10`}>
         <div className='w-[50%]'>
           <p>The Siargao International Surfing Festival is one of the biggest surfing events in the Philippines where the whole Siargao community makes an effort to bring back the island's energy through surfing, music, and food.</p>
