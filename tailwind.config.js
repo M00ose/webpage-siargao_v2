@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         'brand-orange': '#F7A01B',
         'brand-yellow': '#FCD512',
-        'brand-purple': '#7F58A4',
+        'brand-purple': '#7152a1',
         'brand-blue': '#00A1DF',
       },
     },
@@ -20,7 +20,7 @@ module.exports = {
       xxs: "385px",
       xs: "480px",
       ss: "620px",
-      sm: "770px",
+      sm: "768px",
       md: "1024px",
       lg: "1200px",
       xl: "1700px",
