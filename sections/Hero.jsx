@@ -9,121 +9,113 @@ import { presentors } from '../constants';
 
 const Hero = () => {
   return (
-    <section className={`${styles.innerWidth} snap-start min-h-screen h-fit relative`}>
+    <section className={`${styles.innerWidth} snap-start min-h-screen w-full relative overflow-hidden`}>
         <Navbar />
         <Socials />
-        <motion.div
+
+        <motion.div 
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className={`${styles.padding} ${styles.innerWidth} flex flex-col md:flex-row xxs:gap-12 md:gap-24 justify-between md:justify-center min-h-[80vh] w-full relative z-10`}
+            className={`flex flex-col min-h-[100vh] min-w-[50vw] md:flex-row items-center md:justify-between z-20`}
         >
-            {/* Siargao International Surfing Festival Logo */}
-            <div className={`${styles.xPaddings} flex flex-col items-center`}>
-                {/* 26th */}
-                <motion.div
-                    variants={drop(0.5,1)}
-                    className={`relative flex flex-row justify-center w-full`}
-                >
-                    <div className='absolute h-14 ss:h-24 bottom-0 left-[12%] ss:left-[20%] md:-left-[2%]'>
-                      <Image 
-                        key="tree"
-                        src="/tree.png"
-                        alt="tree"
-                        width={28}
-                        height={28}
-                        className="h-full w-full -rotate-12"
-                    />  
-                    </div>
-                    <div className='absolute h-8 ss:h-12 bottom-0 left-[20%] ss:left-[26%] md:left-[8%]'>
-                      <Image 
-                        key="hut"
-                        src="/hut.png"
-                        alt="hut"
-                        width={32}
-                        height={32}
-                        className="h-full w-full"
-                    />  
-                    </div>
-                    
-                    <div className='w-[75%] h-full justify-center flex flex-row items-center text-brand-yellow'>
-                        <h1 className='text-8xl ss:text-[10rem] -mb-4 sm:-mb-8'>26</h1>
-                        <p className='text-1xl ss:text-4xl'>TH</p>
-                    </div>
-                    
-                </motion.div>
-                
-                {/* Siargao */}
-                <motion.div
-                    variants={zoomIn(0.2, 0.5)}
-                    className='text-center text-9xl ss:text-[12rem]  text-white'
-                >
-                    
-                    <div className='-mt-4'>S<span className='text-brand-yellow'>IA</span>R</div>
-                    <div className='-mt-10 ss:-mt-14 tracking-wide sm:tracking-wider'>GAO</div>
-                </motion.div>
-                
-                {/* International Surfing Festival */}
-                <motion.div
-                    variants={slideIn('left','tween',1,0.5)}
-                    className='flex items-start justify-between w-[60%] ss:w-[50%] md:w-[90%] -mt-4'
-                >
-                    
-                    <div className='w-[50%] text-2xl xxs:text-3xl ss:text-5xl text-white'>
-                        <div className='-mt-2 ss:-mt-4 text-base xxs:text-lg ss:text-2xl'>International</div>
-                        <div className='-mt-2 tracking-widest'>Surfing</div>
-                        <div className='-mt-2 tracking-wider'>Festival</div>
-                    </div>
-                    <div className='flex w-[50%] h-[10vh] relative'>
-                        <div className='ss:h-44 ss:w-44 absolute z-10'>
-                           <Image 
-                            key="surfer"
-                            src="/surfer.png"
-                            alt="surfer"
-                            height={108}
-                            width={108}
-                            className='h-full w-full -translate-y-20 ss:-translate-y-36 xxs:translate-x-3'
-                        /> 
-                        </div>
-                        
-                        <div className='absolute h-[160%] w-[160%]'>
+            <div className={`${styles.paddings} min-w-[50vw] mt-20 md:mt-16 z-20 flex justify-center overflow-hidden`}>
+                <div className='h-fit w-[200px] sm:w-[300px] grid grid-row-4'>
+
+                    {/* New Row */}
+                    <motion.div
+                        variants={drop(0.5,1)}
+                        className='relative grid grid-cols-3 content-end'
+                    >
+                        <div className='flex flex-row items-end'>
                             <Image 
-                            key="wave"
-                            src="/wave.png"
-                            alt="wave"
-                            height={150}
-                            width={150}
-                            className='h-[160%] w-[160%] -translate-y-[60%] translate-x-[10%] ss:-translate-x-[7%] md:translate-x-0'
+                                key="tree"
+                                src="/tree.png"
+                                alt="tree"
+                                width={28}
+                                height={28}
+                                className='sm:h-[84px] sm:w-auto -rotate-12'
+                            />
+
+                            <Image 
+                                key="hut"
+                                src="/hut.png"
+                                alt="hut"
+                                width={32}
+                                height={32}
+                                className='sm:h-[48px] sm:w-[48px]'
+                            />
+                        </div>
+
+                        <div className='-mb-7 flex flex-row items-center text-brand-yellow'>
+                            <h1 className='text-6xl sm:text-9xl'>26</h1>
+                            <h1 className='text-1xl'>TH</h1>
+                        </div>
+
+                    </motion.div>
+
+                    {/* New Row */}
+                    <motion.div
+                        variants={zoomIn(0.2, 0.5)}
+                        className='-mt-3 text-8xl sm:text-[9rem] text-center text-white'
+                    >
+                        <h1>S<span className='text-brand-yellow'>IA</span>R</h1>
+                        <h1 className='tracking-widest sm:tracking-wider -mt-6 sm:-mt-10'>GAO</h1>
+                    </motion.div>
+
+                    {/* New Row */}
+                    <motion.div 
+                        variants={slideIn('left','tween',1,0.5)}
+                        className='-mt-4 flex flex-row relative pl-2 sm:pl-6'
+                    >
+                        <div className='text-2xl sm:text-3xl text-white'>
+                            <h1 className='text-[16px] sm:text-xl -mt-3'>International</h1>
+                            <h1 className='tracking-[0.2rem] -mt-4 sm:-mt-3'>Surfing</h1>
+                            <h1 className='tracking-[0.12rem] -mt-4 sm:-mt-3'>Festival</h1> 
+                        </div>
+
+                        <div>
+                            <Image 
+                                key="surfer"
+                                src="/surfer.png"
+                                alt="surfer"
+                                height={108}
+                                width={108}
+                                className='absolute sm:h-[140px] sm:w-[140px] bottom-5 right-0 z-10'
+                            />
+                            <Image 
+                                key="wave"
+                                src="/wave.png"
+                                alt="wave"
+                                height={140}
+                                width={140}
+                                className='absolute sm:h-[200px] sm:w-[200px] bottom-0 right-0 translate-x-10 sm:translate-x-14 translate-y-3 sm:translate-y-4'
                             />
                         </div>
                         
-                    </div>
-                </motion.div>
-                
-                <motion.div
-                    variants={fadeIn("down","tween",2.5,0.5)}
-                    className='relative z-10'
-                >
-                    {/* Left Bottom Frame */}
-                    <div
-                        className='absolute -translate-y-[70%] ss:-translate-y-[55%] sm:-translate-y-[52%] md:-translate-y-[75%] translate-x-[35%] md:translate-x-[52%] h-[200vw] w-[200vw] md:h-[150vw] md:w-[150vw] top-0 right-0 overflow-hidden'
+                    </motion.div>
+
+                    {/* sponsors */}
+                    <motion.div
+                        variants={zoomIn(2.5,0.5)}
+                        className='md:invisible grid grid-cols-4 justify-items-center mt-4'
                     >
-                        <Image
-                            key="right-bottomFrame"
-                            src="/bottomFrame.png"
-                            alt="bottomFrame"
-                            height={720}
-                            width={720}
-                            className='h-full w-full rotate-[180deg] md:rotate-[110deg]'
-                        />
-                    </div>
-                    
-                </motion.div>
-
+                        {presentors.map((presentor) => (
+                            <Image 
+                                key={presentor.name}
+                                src={presentor.url}
+                                alt={presentor.name}
+                                height={presentor.height}
+                                width={presentor.width}
+                                className='h-12 w-auto flex items-center'
+                            />
+                        ))}
+                    </motion.div>
+                </div>    
             </div>
-
-            <div>
+            
+            <div className={`${styles.paddings} h-0 md:h-fit min-w-[50vw] invisible md:visible z-20`}>
                 {/* sponsors */}
                 <div className={`${styles.paddings} flex justify-center`}>
                     <motion.div
@@ -143,72 +135,77 @@ const Hero = () => {
 
                     </motion.div>
                 </div>
-
-                <motion.div 
-                    variants={fadeIn("up","tween",3.5,0.5)}
-                    className='relative'
-                >
-                    {/* Drums */}
-                    <div 
-                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] ss:-translate-y-[35%] md:-translate-y-[20%] h-96 w-96 ss:h-[48rem] ss:w-[48rem] z-10'
-                    >
-                        <Image
-                            key="drums"
-                            src="/drums.png"
-                            alt="drums"
-                            height={480}
-                            width={480}
-                            className='h-full w-full'
-                        />
-                    </div>
-                    
-                    {/* Guitar */}
-                    <div 
-                        className='absolute top-0 -translate-y-[50%] xxs:-translate-y-[30%] ss:-translate-y-[50%] md:-translate-y-[10%] -translate-x-[30%] md:-translate-x-[40%] h-72 w-72 ss:h-[36rem] ss:w-[36rem] -rotate-45 z-10'
-                    >
-                        <Image
-                            key="guitar"
-                            src="/guitar.png"
-                            alt="guitar"
-                            height={480}
-                            width={480}
-                            className='h-full w-full'
-                        />
-
-                    </div>
-                    
-                    {/* Drinks */}
-                    <div 
-                        className='absolute top-0 -translate-y-[40%] xxs:-translate-y-[20%] ss:-translate-y-[35%] md:-translate-y-[10%] md:-translate-x-[10%] h-96 w-96 ss:h-[48rem] ss:w-[48rem] z-10'
-                    >
-                        <Image
-                            key="drinks"
-                            src="/drinks.png"
-                            alt="drinks"
-                            height={480}
-                            width={480}
-                            className='h-full w-full -rotate-12'
-                        />
-                    </div>
-
-                    {/* Right Bottom Frame */}
-                    <div
-                        className='absolute h-[200vw] w-[200vw] md:h-[100vw] md:w-[100vw] top-0 right-0 -translate-y-[75%] xxs:-translate-y-[70%] sm:-translate-y-[75%] md:-translate-y-[50%] translate-x-[20%] md:translate-x-[30%] rotate-12 md:rotate-[270deg]'
-                    >
-                        <Image
-                            key="right-bottomFrame"
-                            src="/bottomFrame.png"
-                            alt="bottomFrame"
-                            height={720}
-                            width={720}
-                            className='h-full w-full'
-                        />
-                    </div>
-
-                </motion.div>
             </div>
 
         </motion.div>
+
+        {/* Frame */}
+        <Image 
+            key="left-bottomFrame"
+            src="/bottomFrame.png"
+            alt="frame"
+            height={1080}
+            width={1080}
+            className='absolute top-0 left-0 h-[800px] min-w-[1280px] rotate-[180deg] -translate-x-[45%] -translate-y-[10%] z-10'
+        />
+
+        {/* Frame */}
+        <Image 
+            key="right-bottomFrame"
+            src="/bottomFrame.png"
+            alt="frame"
+            height={1080}
+            width={1080}
+            className='absolute bottom-0 right-0 h-[800px] min-w-[1280px] translate-x-[20%] translate-y-[10%] z-10'
+        />
+        
+        <motion.div 
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className='relative w-full z-20 flex justify-center md:justify-end md:-translate-x-[12vw]'>
+            <motion.div
+                variants={slideIn("right","tween",3.5,0.5)} 
+                className='relative w-[300px]'
+            >
+               {/* Drums */}
+                <Image 
+                    key="drums"
+                    src="/drums.png"
+                    alt="drums"
+                    height={360}
+                    width={360}
+                    className='absolute bottom-0 left-0 h-auto w-[75vw] max-w-[200px] translate-x-[30%] z-20'
+                />
+
+                {/* Drinks */}
+                <Image 
+                    key="drinks"
+                    src="/drinks.png"
+                    alt="drinks"
+                    height={240}
+                    width={240}
+                    className='absolute bottom-0 left-0 h-auto w-[70vw] max-w-[200px] translate-y-[10%] translate-x-[35%] -rotate-12 z-30'
+                />
+
+                {/* Guitar */}
+                <Image 
+                    key="guitar"
+                    src="/guitar.png"
+                    alt="guitar"
+                    height={240}
+                    width={240}
+                    className='absolute bottom-0 left-0 h-auto w-[60vw] max-w-[175px] -rotate-[60deg] -translate-x-[40%] z-10'
+                /> 
+            </motion.div>
+            
+        </motion.div>
+
+        <div className='absolute top-20 left-10 h-96 w-96 rounded-full nav-gradient'></div>
+        <div className='absolute top-10 right-0 h-[28rem] w-[28rem] rounded-full nav-gradient z-10'></div>
+        <div className='absolute top-10 right-0 translate-x-2 h-[28rem] w-[28rem] rounded-full orange-gradient'></div>
+
     </section>
   )
 }
