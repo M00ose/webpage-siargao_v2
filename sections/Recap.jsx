@@ -1,4 +1,6 @@
 'use client'
+import React from 'react';
+import ReactPlayer from 'react-player';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -15,11 +17,18 @@ const Recap = () => {
     >
         <motion.div variants={textVariant(0.2)} className='flex-1 flex flex-col gap-8 lg:gap-24 items-center justify-center md:flex-row p-12 min-w-[400px] max-w-[1200px] text-center z-40'>
             <h2 className='pt-24 sm:pt-0 text-2xl sm:text-3xl lg:text-4xl text-white text-center md:text-start'>Look back at all the events and watch the official aftermovie to see how the island celebrated its epic return!</h2>
-            <video 
-                src='/Aftermovie.mp4' 
+            <div className='h-[250px] w-[50vw] min-w-[50vw] max-w-[90vw] rounded-lg shadow-lg object-fit overflow-hidden'>
+            <ReactPlayer
+                key="Aftermovie"
+                title="Aftermovie"
+                alt="Aftermovie"
+                url='https://www.youtube.com/watch?v=BcniKiedP-w'
                 controls
-                className='max-[90vw] md:max-w-[550px] rounded-lg shadow-lg'
-            />
+                width={'inherit'}
+                height={'inherit'}
+            />  
+            </div>
+            
         </motion.div>
 
         <motion.div
@@ -52,7 +61,7 @@ const Recap = () => {
 
         <div className='absolute top-20 left-10 h-96 w-96 rounded-full nav-gradient'></div>
         <div className='absolute top-80 right-0 h-96 w-96 rounded-full nav-gradient'></div>
-        <motion.div variants={textVariant(1)}>
+        <motion.div variants={textVariant(1)} className='z-10'>
           <Footer/>
         </motion.div>
         
