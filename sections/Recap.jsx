@@ -11,13 +11,13 @@ import Footer from '../components/Footer';
 const Recap = () => {
   return (
     <motion.section 
-      initial='hidden'
-      whileInView='show'
+      initial="hidden"
+      whileInView="show"
       className='relative snap-start flex flex-col justify-center items-center h-full min-h-screen w-screen max-w-screen overflow-hidden'
     >
         <motion.div variants={textVariant(0.2)} className='flex-1 flex flex-col gap-8 lg:gap-24 items-center justify-center md:flex-row p-12 min-w-[400px] max-w-[1200px] text-center z-40'>
-            <h2 className='pt-24 sm:pt-0 text-2xl sm:text-3xl lg:text-4xl text-white text-center md:text-start'>Look back at all the events and watch the official aftermovie to see how the island celebrated its epic return!</h2>
-            <div className='h-[250px] w-[50vw] min-w-[50vw] max-w-[90vw] rounded-lg shadow-lg object-fit overflow-hidden'>
+            <h2 className='pt-24 sm:pt-0 text-2xl sm:text-3xl lg:text-4xl text-white text-center md:text-start min-w-[30vw]'>Look back at all the events and watch the official aftermovie to see how the island celebrated its epic return!</h2>
+            <div className='h-[250px] md:h-[350px] xl:h-[500px] w-[50vw] xl:w-[50vw] min-w-[50vw] max-w-[90vw] rounded-lg shadow-lg object-fit overflow-hidden'>
             <ReactPlayer
                 key="Aftermovie"
                 title="Aftermovie"

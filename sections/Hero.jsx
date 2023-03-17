@@ -20,7 +20,10 @@ const Hero = () => {
             viewport={{ once: true }}
             className={`flex flex-col min-h-[100vh] min-w-[50vw] md:flex-row items-center md:justify-between z-30`}
         >
-        <Logo />
+        <div className='z-20'>
+            <Logo /> 
+        </div>
+        
         
         <div className={`${styles.paddings} h-0 md:h-fit min-w-[50vw] invisible md:visible z-20`}>
             {/* sponsors */}
@@ -109,9 +112,9 @@ const Hero = () => {
             
         </motion.div>
 
-        {/* <div className='absolute top-20 left-10 h-96 w-96 rounded-full nav-gradient'></div>
+        <div className='absolute top-20 left-10 h-96 w-96 rounded-full nav-gradient'></div>
         <div className='absolute top-10 right-0 h-[28rem] w-[28rem] rounded-full nav-gradient'></div>
-        <div className='absolute top-10 right-0 translate-x-2 h-[28rem] w-[28rem] rounded-full orange-gradient'></div> */}
+        <div className='absolute top-10 right-0 translate-x-2 h-[28rem] w-[28rem] rounded-full orange-gradient'></div>
 
     </section>
   )
