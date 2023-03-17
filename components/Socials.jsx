@@ -1,7 +1,7 @@
 'use client';
 import Facebook from '@mui/icons-material/Facebook';
 import Instagram from '@mui/icons-material/Instagram';
-import YouTube from '@mui/icons-material/Youtube';
+import YouTube from '@mui/icons-material/YouTube';
 import Email from '@mui/icons-material/Email';
 
 const Socials = () => {
